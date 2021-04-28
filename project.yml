@@ -1,6 +1,6 @@
 ---
 - name: create project
-- hosts: 172.25.52.123
+- hosts: client
   vars:
 #vars auth openstack
     ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
