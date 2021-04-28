@@ -17,7 +17,6 @@
     OS_PROJECT: "ansibletest-project1"
     OS_DNS_NAMESERVER1: "8.8.8.8"
   tasks:
-    - debug: var=ansible_host
     - name: Create a project
       os_project:
         state: present
