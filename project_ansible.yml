@@ -2,6 +2,10 @@
 - name: create project
   hosts: all
   remote_user: root
+  vars_prompt:
+    - name: OS_PROJECT
+      prompt: Entrer le nom du projet
+      private: no
   vars:
 #vars auth openstack
     ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
@@ -14,7 +18,7 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
 #vars project
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "ansibletest-project1"
+#    OS_PROJECT: "ansibletest-project1"
     OS_DNS_NAMESERVER1: "8.8.8.8"
   tasks:
     - name: Create a project
