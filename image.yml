@@ -1,0 +1,42 @@
+---
+- name: create image
+  hosts: all
+  remote_user: root
+  vars:
+#vars auth openstack
+    ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
+    OS_USERNAME: "admin"
+    OS_PASSWORD: "devstack"
+    OS_REGION_NAME: "RegionOne"
+    OS_AUTH_URL: "http://172.25.52.123/identity"
+    OS_USER_DOMAIN_NAME: "Default"
+    OS_PROJECT_DOMAIN_NAME: "Default"
+    PS1: '[\u@\h \W(keystone_admin)]\$'
+    OS_DNS_NAMESERVER1: "8.8.8.8"
+    OS_PROJECT_NAME: "admin"
+
+
+#vars image
+    NAME_IMAGE: "ubuntu16"
+    FILENAME: "/home/devstack/Downloads/ubuntu-16.04.7-desktop-amd64.iso"
+    DISK_FORMAT: "iso"
+    DISTRO: "ubuntu"
+  tasks:
+    
+    - name: create an image
+      os_image:
+        state: present
+        auth:
+          auth_url: "{{ OS_AUTH_URL }}"
+          username: "{{ OS_USERNAME }}"
+          password: "{{ OS_PASSWORD }}"
+          project_name: "{{ OS_PROJECT_NAME }}"
+          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
+          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
+        name: "{{ NAME_IMAGE }}"
+        container_format: bare
+        disk_format: "{{ DISK_FORMAT }}"
+        filename: "{{ FILENAME }}"
+        properties:
+          cpu_arch: x86_64
+          distro: "{{ DISTRO }}"
