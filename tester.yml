@@ -48,4 +48,4 @@
         role: admin
         project: "{{ OS_PROJECT }}"
 ...
-© 2021 GitHub, Inc.
+
