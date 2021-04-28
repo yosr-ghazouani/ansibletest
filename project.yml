@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: create project
+  hosts: all
   tasks:
     - openstack.cloud.project_info:
         cloud: devstack
