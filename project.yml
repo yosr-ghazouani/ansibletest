@@ -1,5 +1,5 @@
 - name: create project
-  hosts: all
+  hosts: client
   tasks:
     - name: create project
       os_project:
