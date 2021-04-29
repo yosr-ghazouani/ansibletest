@@ -33,6 +33,5 @@
        reuse: yes
        server: "{{ NAME_INSTANCE }}"
        network: "{{ NAME_EXT_NERWORK }}"
-       fixed_address: 10.0.16.157
        destination_nat: int_network
 
