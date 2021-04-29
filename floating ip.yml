@@ -33,5 +33,4 @@
        reuse: yes
        server: "{{ NAME_INSTANCE }}"
        network: "{{ NAME_EXT_NERWORK }}"
-       destination_nat: int_network
-
+     
