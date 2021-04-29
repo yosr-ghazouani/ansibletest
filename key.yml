@@ -15,7 +15,7 @@
     OS_DNS_NAMESERVER1: "8.8.8.8"
     OS_PROJECT_NAME: "ansibletest-project1"
 #vars key
-    KEY_NAME: ansible_key
+    KEY_NAME: ansible_key1
 
 
 
