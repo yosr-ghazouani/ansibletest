@@ -15,7 +15,7 @@
     OS_DNS_NAMESERVER1: "8.8.8.8"
 
 #vars externe network
-    NAME_EXT_NETWORK: "ext_network"
+    NAME_EXT_NETWORK: "externe_network"
     OS_PROJECT_NAME: "admin"
 
 #vars externe subnet
