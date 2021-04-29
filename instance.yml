@@ -17,12 +17,12 @@
     OS_PROJECT: "ansibletest-project1"
 
 #vars instance
-    NAME_INSTANCE: "ansible_istance"
+    NAME_INSTANCE: "ansible_instance"
     NAME_IMAGE: "cirros-0.5.1-x86_64-disk"
     NAME_INT_NETWORK: "int_network"
     SECURITY_GROUP: "groupe1"
     KEY_NAME: ansible_key
-    NAME_FLAVOR: "flavor2"
+    NAME_FLAVOR: "cirros256"
   tasks:
 
     - name: create a new instance
