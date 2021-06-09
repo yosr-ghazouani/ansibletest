@@ -14,10 +14,10 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_DNS_NAMESERVER1: "8.8.8.8"
 #vars user
-    USERMEMBER: "ansibleuser"
-    PASSWORD_USER: "root"
-    EMAIL_USER: "ansibleuser@gmail.com"
-    OS_PROJECT: "ansibletest-project1"
+    OS_PROJECT: "{{ project | default(None) }}"
+    USERMEMBER: "{{ member | default(None) }}"
+    PASSWORD_USER: "{{ password | default(None) }}"
+    EMAIL_USER: "{{ email | default(None) }}"
     OS_PROJECT_NAME: "admin"
 
   tasks:
