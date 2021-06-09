@@ -11,8 +11,8 @@
     OS_AUTH_URL: "http://172.25.52.123/identity"
     OS_USER_DOMAIN_NAME: "Default"
     OS_PROJECT_DOMAIN_NAME: "Default"
-    PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_DNS_NAMESERVER1: "8.8.8.8"
+    OS_PROJECT_NAME: "admin"
 
 #vars externe network
     NAME_EXT_NETWORK: "{{ ext_network | default(None) }}"
