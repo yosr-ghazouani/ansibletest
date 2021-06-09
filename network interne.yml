@@ -14,7 +14,7 @@
 
     OS_PROJECT_NAME: "admin"
     OS_PROJECT: "{{ project | default(None) }}"
-    OS_DNS_NAMESERVER: "8.8.8.8"    
+    DNS_NAMESERVER: "8.8.8.8"
 #vars interne network
     NAME_INT_NETWORK: "{{ int_network | default(None) }}"
 #vars interne subnet
