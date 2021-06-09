@@ -32,8 +32,6 @@
          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
        name: "{{ NAME_FLAVOR }}"
-       ram: "{{ RAM_FLAVOR }}"
-       vcpus: "{{ VCPU_FLAVOR }}"
        disk: "{{ DISQUE_FLAVOR }}"
-       ephemeral: "{{ DISQUE_EPHEMERAL }}"
+
 
