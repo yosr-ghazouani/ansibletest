@@ -15,20 +15,15 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_DNS_NAMESERVER1: "8.8.8.8"
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "ansibletest-project1"
-
-
-
+    OS_PROJECT: "{{ project | default(None) }}"
 #vars quota
-    INSTANCES_PROJECT: "6"
-    CORES_PROJECT: "10"
-    RAM_PROJECT: "15000"
-    VOLUMES_PROJECT: "6"
-    SNAPSHOTS_PROJECT: "6"
-    SECURITY_GROUP_PROJECT: "8"
-    NETWORK_PROJECT: "50"
-    SUBNET_PROJECT: "50"
-    GIGABYTES_PROJECT: "500"
+    INSTANCES_PROJECT: "{{ instances | default(None) }}"
+    CORES_PROJECT: "{{ cores | default(None) }}"
+    RAM_PROJECT: "{{ ram | default(None) }}"
+    VOLUMES_PROJECT: "{{ volumes | default(None) }}"
+    SNAPSHOTS_PROJECT: "{{ snapshot | default(None) }}"
+    NETWORK_PROJECT: "{{ network | default(None) }}"
+    GIGABYTES_PROJECT: "{{ storage | default(None) }}"
 
 
   tasks:
