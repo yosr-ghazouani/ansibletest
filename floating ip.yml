@@ -6,18 +6,18 @@
   vars:
 #vars auth openstack
     ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
-    OS_USERNAME: "ansibleuser"
-    OS_PASSWORD: "root"
+    OS_USERNAME: "{{ os_username | default(None) }}"
+    OS_PASSWORD: "{{ os_password | default(None) }}"
     OS_REGION_NAME: "RegionOne"
     OS_AUTH_URL: "http://172.25.52.123/identity"
     OS_USER_DOMAIN_NAME: "Default"
     OS_PROJECT_DOMAIN_NAME: "Default"
-    PS1: '[\u@\h \W(keystone_admin)]\$'
+
     OS_DNS_NAMESERVER1: "8.8.8.8"
-    OS_PROJECT_NAME: "ansibletest-project1"
-    OS_PROJECT: "ansibletest-project1"
-    NAME_INSTANCE: "ansible_instance"
-    NAME_EXT_NERWORK: "externe_network"
+    OS_PROJECT_NAME: "{{ project | default(None) }}"
+    OS_PROJECT: "{{ project | default(None) }}"
+    NAME_INSTANCE: "{{name | default(None) }}"
+    NAME_EXT_NERWORK: "{{ ext_network | default(None) }}"
 
   tasks:
     - name: create a floating_ip
