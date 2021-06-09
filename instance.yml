@@ -14,14 +14,14 @@
     PS1: '[\u@\h \W(keystone_admin)]\$'
     OS_DNS_NAMESERVER1: "8.8.8.8"
     OS_PROJECT_NAME: "admin"
-    OS_PROJECT: "ansibletest-project1"
+    OS_PROJECT: "{{ project | default(None) }}"
 
 #vars instance
-    NAME_INSTANCE: "ansible_instance"
+    NAME_INSTANCE: "{{ name | default(None) }}"
     NAME_IMAGE: "cirros-0.5.1-x86_64-disk"
-    NAME_INT_NETWORK: "int_network"
-    SECURITY_GROUP: "groupe1"
-    KEY_NAME: ansible_key
+    NAME_INT_NETWORK: "{{ int_network| default(None) }}"
+    SECURITY_GROUP: "{{ sc_grp | default(None) }}"
+    KEY_NAME: "{{ key | default(None) }}"
     NAME_FLAVOR: "cirros256"
   tasks:
 
