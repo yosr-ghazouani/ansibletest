@@ -9,7 +9,7 @@
     OS_REGION_NAME: "RegionOne"
     OS_AUTH_URL: "http://172.25.52.123/identity"
     OS_USER_DOMAIN_NAME: "Default"
-'
+
 #vars project
     OS_PROJECT_NAME: "admin"
     OS_PROJECT: "{{ project | default(None) }}" 
