@@ -21,7 +21,7 @@
     NAME_INT_NETWORK: "{{ int_network| default(None) }}"
     SECURITY_GROUP: "{{ sc_grp | default(None) }}"
     KEY_NAME: "{{ key | default(None) }}"
-    NAME_FLAVOR: "cirros256"
+    NAME_FLAVOR: "m1.tiny"
   tasks:
 
     - name: create a new instance
