@@ -16,7 +16,7 @@
     OS_PROJECT_NAME: "admin"
     OS_PROJECT: "{{ project | default(None) }}"
 #vars security_group
-    SECURITY_GROUP: "{{ sec_group | default(None) }}"
+    SECURITY_GROUP: "{{ sc_grp | default(None) }}"
   tasks:
 
     - name: Create a security group
