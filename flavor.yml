@@ -18,9 +18,13 @@
 #vars flavor
     NAME_FLAVOR: "{{ flavor| default(None) }}"
     DISQUE_FLAVOR: "{{ Go | default(None) }}"
+    RAM_FLAVOR: "6000"
+    VCPU_FLAVOR: "2"
+    DISQUE_EPHEMERAL: "10"
 
+ 
   tasks:
-
+    - debug: var=ansible_host
     - name: create a flavor
       os_nova_flavor:
        state: present
@@ -32,6 +36,9 @@
          os_user_domain_name: "{{ OS_USER_DOMAIN_NAME }}"
          os_project_domain_name: "{{ OS_PROJECT_DOMAIN_NAME }}"
        name: "{{ NAME_FLAVOR }}"
+       ram: "{{ RAM_FLAVOR }}"
+       vcpus: "{{ VCPU_FLAVOR }}"
        disk: "{{ DISQUE_FLAVOR }}"
+       ephemeral: "{{ DISQUE_EPHEMERAL }}"
 
 
