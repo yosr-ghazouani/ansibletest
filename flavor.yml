@@ -2,8 +2,7 @@
 - name: create flavor
   hosts: all
   remote_user: root
-
-
+  vars: 
 #vars auth openstack
     ANSIBLE_PYTHON_INTERPRETER: "/usr/bin/python3.6"
     OS_USERNAME: "admin"
