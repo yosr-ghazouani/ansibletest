@@ -14,7 +14,7 @@
     OS_DNS_NAMESERVER1: "8.8.8.8"
     OS_PROJECT_NAME: "{{ project | default(None) }}"
 #vars key
-    KEY_NAME: "{{ key | default(None) }}"
+    KEY_NAME: "{{ key_name | default(None) }}"
   tasks:
     - name: create a key pair
       os_keypair:
